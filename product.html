@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Modern Furniture &amp; Mattresses</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .product-detail-section {
+      padding: 4rem 0 6rem;
+      background: var(--bg);
+      min-height: 70vh;
+    }
+    .product-detail-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--primary);
+      text-decoration: none;
+      margin-bottom: 2.5rem;
+      transition: opacity 0.2s;
+    }
+    .product-detail-back:hover { opacity: 0.75; }
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .product-detail-img-wrap {
+      background: #f5f5f5;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      position: sticky;
+      top: 100px;
+    }
+    .product-detail-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .product-detail-info {
+      padding-top: 0.5rem;
+    }
+    .product-detail-collection {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--secondary);
+      margin-bottom: 0.75rem;
+    }
+    .product-detail-name {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .product-detail-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      background: var(--primary);
+      color: #fff;
+    }
+    .product-detail-badge.sale {
+      background: #c0392b;
+    }
+    .product-detail-divider {
+      height: 1px;
+      background: #1e1e1e;
+      margin: 1.5rem 0;
+    }
+    .product-detail-desc {
+      color: var(--secondary);
+      line-height: 1.85;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    .product-detail-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .product-detail-contact {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border-radius: 10px;
+      border: 1px solid #1e1e1e;
+    }
+    .product-detail-contact p {
+      font-size: 0.9rem;
+      color: var(--secondary);
+      margin-bottom: 0.4rem;
+    }
+    .product-detail-contact strong {
+      color: var(--text);
+    }
+    @media (max-width: 768px) {
+      .product-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .product-detail-img-wrap {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><em class="logo-modern">Modern</em> <span>Furniture &amp; Mattresses</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#departments" class="active">Departments</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== TICKER ==================== -->
+    <div class="ticker-bar" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-item">
+          Modern Furniture &amp; Mattresses
+          <span class="ticker-sep">★</span>
+          Delivery &amp; Setup Available
+          <span class="ticker-sep">★</span>
+          In Business Since 1910
+          <span class="ticker-sep">★</span>
+          Visit Us at 99 Jefferson St
+          <span class="ticker-sep">★</span>
+          Living Room &nbsp;·&nbsp; Bedroom &nbsp;·&nbsp; Dining &nbsp;·&nbsp; Mattresses
+          <span class="ticker-sep">★</span>
+        </div>
+        <div class="ticker-item">
+          Modern Furniture &amp; Mattresses
+          <span class="ticker-sep">★</span>
+          Delivery &amp; Setup Available
+          <span class="ticker-sep">★</span>
+          In Business Since 1910
+          <span class="ticker-sep">★</span>
+          Visit Us at 99 Jefferson St
+          <span class="ticker-sep">★</span>
+          Living Room &nbsp;·&nbsp; Bedroom &nbsp;·&nbsp; Dining &nbsp;·&nbsp; Mattresses
+          <span class="ticker-sep">★</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-detail-section">
+      <div class="container">
+
+        <a href="#" class="product-detail-back" id="backBtn">
+          <i class="fa-solid fa-arrow-left"></i> Back to Department
+        </a>
+
+        <div class="product-detail-grid">
+
+          <div class="product-detail-img-wrap">
+            <img id="detailImg" src="" alt="" />
+          </div>
+
+          <div class="product-detail-info">
+            <p class="product-detail-collection" id="detailCollection"></p>
+            <h1 class="product-detail-name" id="detailName"></h1>
+            <span class="product-detail-badge" id="detailBadge"></span>
+            <div class="product-detail-divider"></div>
+            <p class="product-detail-desc" id="detailDesc"></p>
+            <div class="product-detail-actions">
+              <a href="tel:5084636272" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Us: (508) 463-6272</a>
+              <a href="index.html#contact" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Enquire</a>
+              <a href="#" class="btn" id="detailBackBtn" style="background:#111111;color:#ffffff;border-color:#111111;">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </a>
+            </div>
+            <div class="product-detail-contact">
+              <p><strong>Visit Our Showroom</strong></p>
+              <p>99 Jefferson St, Fall River, MA 02721</p>
+              <p>Mon–Fri: 9am – 6pm &nbsp;|&nbsp; Sat: 9am – 5pm &nbsp;|&nbsp; Sun: 12pm – 5pm</p>
+              <p style="margin-top:0.6rem;"><a href="tel:5084636272" style="color:var(--primary);">(508) 463-6272</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo"><em class="logo-modern">Modern</em> <span>Furniture &amp; Mattresses</span></div>
+          <p class="footer-tagline">Premium furniture and mattresses for modern living. Visit us at 99 Jefferson St.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/ModernFurniture99/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            
+            
+            
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#departments">Departments</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Departments</h4>
+          <ul>
+            <li><a href="living-room.html">Living Room</a></li>
+            <li><a href="bedroom.html">Bedroom</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="index.html#departments">Mattresses</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span class="footer-year"></span> Modern Furniture &amp; Mattresses. All rights reserved.</span>
+        <span>99 Jefferson St, Fall River, MA 02721</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const data       = JSON.parse(sessionStorage.getItem('productData') || '{}');
+    const img        = data.img        || '';
+    const name       = data.name       || 'Product';
+    const collection = data.collection || '';
+    const badge      = data.badge      || '';
+    const desc       = data.desc       || '';
+    const dept       = data.dept       || 'index.html';
+
+    document.title = name + ' | Modern Furniture & Mattresses';
+    document.getElementById('detailImg').src = img;
+    document.getElementById('detailImg').alt = name;
+    document.getElementById('detailName').textContent = name;
+    document.getElementById('detailCollection').textContent = collection;
+    document.getElementById('detailDesc').textContent = desc;
+
+    const badgeEl = document.getElementById('detailBadge');
+    if (badge) {
+      badgeEl.textContent = badge;
+      if (badge.toLowerCase().includes('sale')) badgeEl.classList.add('sale');
+    } else {
+      badgeEl.style.display = 'none';
+    }
+
+    document.getElementById('backBtn').href = dept;
+    document.getElementById('detailBackBtn').href = dept;
+  </script>
+</body>
+</html>

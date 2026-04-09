@@ -1,0 +1,19 @@
+
+# iCloud Photos
+iCloud Photos from Manish Yagni/
+iCloud Photos from Manish Yagni.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+node_modules/
+.next/
+.env
+.DS-Store
+npm-debug.log
+Modern-Furniture/
